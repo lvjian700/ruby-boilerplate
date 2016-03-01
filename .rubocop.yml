@@ -1,3 +1,5 @@
+inherit_from: .rubocop_todo.yml
+
 AbcSize:
   Enabled: false
 
@@ -33,6 +35,10 @@ Documentation:
 DoubleNegation:
   Enabled: false
 
+EmptyLinesAroundBlockBody:
+  Exclude:
+    - 'db/schema.rb'
+
 EmptyLineBetweenDefs:
   Enabled: false
 
@@ -61,15 +67,24 @@ LineLength:
   Max: 120
   Exclude:
     - 'spec/**/*'
+    - 'config/initializers/*'
+    - 'db/migrate/*'
+    - 'db/schema.rb'
 
 MethodLength:
   Max: 20
+  Exclude:
+    - 'db/migrate/*'
+    - 'app/controllers/api/api_controller.rb'
 
 Metrics/ClassLength:
   Max: 105
 
 Metrics/PerceivedComplexity:
   Max: 10
+
+MultilineBlockChain:
+  Enabled: false
 
 Next:
   Enabled: false
@@ -89,7 +104,7 @@ SignalException:
 SingleLineBlockParams:
   Enabled: false
 
-SingleSpaceBeforeFirstArg:
+SpaceAroundOperators:
   Enabled: false
 
 SpaceInsideBrackets:
@@ -115,4 +130,7 @@ UnusedMethodArgument:
 
 WordArray:
   MinSize: 2
+
+AllCops:
+  TargetRubyVersion: 2.2
 
