@@ -131,6 +131,9 @@ UnusedMethodArgument:
 WordArray:
   MinSize: 2
 
+TrailingBlankLines:
+  EnforcedStyle: final_blank_line
+
 AllCops:
   TargetRubyVersion: 2.2
 
