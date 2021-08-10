@@ -10,4 +10,5 @@ group :development, :test do
   gem 'rubocop'
   gem 'simplecov', require: false
   gem 'timecop'
+  gem 'rubocop-rake', require: false
 end

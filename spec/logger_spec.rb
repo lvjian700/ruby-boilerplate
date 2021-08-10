@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe LOGGER do
   let(:logdev) { LOGGER.instance_variable_get(:@logdev) }
 
@@ -16,4 +18,3 @@ describe LOGGER do
     subject
   end
 end
-
